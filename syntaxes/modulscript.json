@@ -1,0 +1,118 @@
+{
+	"name": "modulscript",
+	"scopeName": "source.modulscript",
+	"comment": "ModulScript",
+	"fileTypes": ["ms"],
+	"foldingStartMarker": "\\s*(on)",
+	"patterns": [
+		{
+		  "include": "#comments"
+		},
+		{
+		  "include": "#numbers"
+		},
+		{
+		  "include": "#variables"
+		},
+		{
+		  "include": "#strings"
+		},
+		{
+		  "include": "#keywords"
+		},
+		{
+		  "include": "#events"
+		},
+		{
+		  "include": "#types"
+		},
+		{
+		  "include": "#effects"
+		},
+		{
+		  "include": "#functions"
+		}
+	],
+	"repository": {
+		"functions": {
+			"patterns": [
+				{
+					"match": "(send|wait|delete)(?=\\()",
+					"name": "entity.name.function.modulscript"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"match": "true|false",
+					"name": "constant.language.true.modulscript"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+			  {
+				"begin": "(%)",
+				"end": "\\n",
+				"name": "comment.percent.skript"
+			  }
+			]
+		},
+		"keywords": {
+		  "patterns": [
+			{
+			  "match": "\\b(on)\\b",
+			  "name": "keyword.other.on.modulscript"
+			},
+			{
+				"match": " is ",
+				"name": "keyword.operator.is.modulscript"
+			},
+			{
+				"match": " in ",
+				"name": "keyword.operator.in.modulscript"
+			},
+			{
+			  "match": "\\b((else )?if|else|while|for)\\b",
+			  "name": "keyword.control.else.modulscript"
+			},
+			{
+			  "match": "#([A-z]|[0-9]){1,6}",
+			  "name": "constant.other.color.modulscript"
+			}
+		  ]
+		},
+		"numbers": {
+		  "patterns": [
+			{
+			  "match": "\\b(([0-9]+)|[0-9][0-2]?(?i)(a|p)m)\\b",
+			  "name": "constant.numeric.modulscript"
+			}
+		  ]
+		},
+		"strings": {
+		  "patterns": [
+			{
+			  "begin": "\"",
+			  "end": "\"",
+			  "name": "string.text.modulscript",
+			  "patterns": [
+				{
+				  "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)",
+				  "name": "constant.character.escape.modulscript"
+				}
+			  ]
+			}
+		  ]
+		},
+		"variables": {
+		  "patterns": [
+			{
+			  "match": "{@[a-zA-Z0-9]+}",
+			  "name": "variable.type.option.modulscript"
+			}
+		  ]
+		}
+	  }
+	}

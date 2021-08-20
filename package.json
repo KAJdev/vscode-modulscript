@@ -1,0 +1,46 @@
+{
+	"name": "modulscript",
+	"version": "0.0.1",
+	"publisher": "kaj",
+	"author": {
+		"name": "kaj"
+	},
+	"license": "MIT",
+	"icon": "icon.png",
+	"description": "ModulScript language support for Visual Studio Code",
+	"displayName": "ModulScript",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kajdev/vscode-modulscript.git"
+	},
+	"bugs": {
+		"url": "https://github.com/kajdev/vscode-modulscript/issues"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets",
+		"Linters"
+	],
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "modulscript",
+				"aliases": [
+					"ModulScript"
+				],
+                "extensions": [".ms"],
+				"configuration": "./modulscript.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "modulscript",
+				"scopeName": "source.modulscript",
+				"path": "./syntaxes/modulscript.json"
+			}
+		]
+	}
+}
