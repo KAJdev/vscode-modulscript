@@ -2,7 +2,7 @@
 
 This extension adds language colorization support for the ModulScript language to VS Code.
 
-![IDE](https://raw.githubusercontent.com/wholroyd/vscode-jinja/master/example.png)
+![IDE](https://raw.githubusercontent.com/kajdev/vscode-modulscript/main/example.png)
 
 ## Using
 
